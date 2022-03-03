@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="item-1">
+        <div>
+            <input type="number" [(ngModel)]="num" (change)="calNum()" />
+        </div>
+    </div>
+    <div class="item-2">
+        <div class="vl"></div>
+        <select name="ddl" (change)="onChangeDD()" [(ngModel)]="dropdown">
+            <option value="isPrime">isPrime</option>
+            <option value="isFibonacci">isFibonacci</option>
+        </select>
+    </div>
+    <div class="item-3">
+        <div class="vl"></div>
+        <div *ngIf="dropdown">{{isPrime}}</div>
+    </div>
+</div>
